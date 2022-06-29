@@ -1,0 +1,17 @@
+fig:unnamed-chunk-3
+fig:unnamed-chunk-6
+def:unlabeled-div-1
+exm:unlabeled-div-2
+fig:scatterplot
+def:unlabeled-div-3
+exm:unlabeled-div-4
+fig:paceoflifefig
+def:unlabeled-div-6
+tab:paceoflifetab
+مفاهیم-پایه
+توصیف-و-اکتشاف-دادهها
+مطالعه-موردی
+رسم-دادهها
+همبستگی-و-رگرسیون
+نمودار-پراکندگی
+رابطه-بین-ریتم-زندگی-و-بیماری-قلبی

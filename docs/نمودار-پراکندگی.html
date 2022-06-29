@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>3.1 نمودار پراکندگی | روش‌های آماری برای روانشناسی</title>
+  <meta name="description" content="<blockquote>
+<p>“این مطالب در حال بروزرسانی است.”</p>
+</blockquote>" />
+  <meta name="generator" content="bookdown 0.26 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="3.1 نمودار پراکندگی | روش‌های آماری برای روانشناسی" />
+  <meta property="og:type" content="book" />
+  <meta property="og:image" content="https://mohsenebrahimyir.github.io/statistical-methods-for-psychology/./img/cover.png" />
+  <meta property="og:description" content="<blockquote>
+<p>“این مطالب در حال بروزرسانی است.”</p>
+</blockquote>" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="3.1 نمودار پراکندگی | روش‌های آماری برای روانشناسی" />
+  
+  <meta name="twitter:description" content="<blockquote>
+<p>“این مطالب در حال بروزرسانی است.”</p>
+</blockquote>" />
+  <meta name="twitter:image" content="https://mohsenebrahimyir.github.io/statistical-methods-for-psychology/./img/cover.png" />
+
+<meta name="author" content="محسن ابراهیمی" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
+<link rel="prev" href="همبستگی-و-رگرسیون.html"/>
+<link rel="next" href="رابطه-بین-ریتم-زندگی-و-بیماری-قلبی.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+<script src="libs/viz-1.8.2/viz.js"></script>
+<link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
+<script src="libs/grViz-binding-1.0.9/grViz.js"></script>
+<!DOCTYPE HTML>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;300&display=swap" rel="stylesheet">
+
+
+
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="stl/style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./index.html">روش‌های آماری برای رواشناسی</a></li>
+<hr />
+<p style="text-align: center;">
+  <a href="https://mohsenebrahimy.ir/">
+  محسن ابراهیمی
+  <br/>
+ <span style="color: #808080;"><em>www.mohsenebrahimy.ir</em></span>
+ </a>
+</p>
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<p style="text-align: center;">
+ <a href="https://web.whatsapp.com/send?phone=989118645816" class="fa fa-whatsapp fa-3x" style="color:green"></a>
+</p>
+<hr />
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>پیش گفتار</a></li>
+<li class="chapter" data-level="" data-path="مقدمه.html"><a href="مقدمه.html"><i class="fa fa-check"></i>مقدمه</a></li>
+<li class="chapter" data-level="1" data-path="مفاهیم-پایه.html"><a href="مفاهیم-پایه.html"><i class="fa fa-check"></i><b>1</b> مفاهیم پایه</a></li>
+<li class="chapter" data-level="2" data-path="توصیف-و-اکتشاف-دادهها.html"><a href="توصیف-و-اکتشاف-دادهها.html"><i class="fa fa-check"></i><b>2</b> توصیف و اکتشاف داده‌ها</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="مطالعه-موردی.html"><a href="مطالعه-موردی.html"><i class="fa fa-check"></i><b>2.1</b> مطالعه موردی</a></li>
+<li class="chapter" data-level="2.2" data-path="رسم-دادهها.html"><a href="رسم-دادهها.html"><i class="fa fa-check"></i><b>2.2</b> رسم داده‌ها</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="همبستگی-و-رگرسیون.html"><a href="همبستگی-و-رگرسیون.html"><i class="fa fa-check"></i><b>3</b> همبستگی و رگرسیون</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="نمودار-پراکندگی.html"><a href="نمودار-پراکندگی.html"><i class="fa fa-check"></i><b>3.1</b> نمودار پراکندگی</a></li>
+<li class="chapter" data-level="3.2" data-path="رابطه-بین-ریتم-زندگی-و-بیماری-قلبی.html"><a href="رابطه-بین-ریتم-زندگی-و-بیماری-قلبی.html"><i class="fa fa-check"></i><b>3.2</b> رابطه بین ریتم زندگی و بیماری قلبی</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="منابع.html"><a href="منابع.html"><i class="fa fa-check"></i>منابع</a></li>
+<li class="divider"></li>
+<hr />
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">روش‌های آماری برای روانشناسی</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="نمودار-پراکندگی" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> نمودار پراکندگی<a href="نمودار-پراکندگی.html#نمودار-پراکندگی" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="definition">
+<p><span id="def:unlabeled-div-1" class="definition"><strong>تعریف 3.1  </strong></span>نمودار پراکندگی</p>
+<p>در یک نمودار پراکندگی
+(<span dir="ltr">scatter plot/diagram</span>)
+هر نمونه آزمایش در مطالعه با نقطه در دو بُعد فضایی نمایش داده می‌شود.</p>
+<p>مختصات نقطه
+<span class="math inline">\(({X}_{i}, {Y}_{j})\)</span>
+به ترتیب نمایانگر مقادیر متغیرهای
+<span class="math inline">\(X\)</span>
+و
+<span class="math inline">\(Y\)</span>
+هستند.</p>
+<p>در یک نمودار پراکندگی متغیر پیش بینی کننده
+(Predictor)
+به طور سنتی روی محور افقی
+(Abscissa)
+یا همان
+<span class="math inline">\(X-axis\)</span>
+نشان داده می‌شود و متغییر معیار
+(Criterion)
+روی محور عمودی
+(Ordinate)
+یا همان
+<span class="math inline">\(Y-axis\)</span>
+نشان داده می‌شود.</p>
+</div>
+<div class="example">
+<p><span id="exm:unlabeled-div-2" class="example"><strong>مثال 3.1  </strong></span>برای مثال در شکل
+<a href="نمودار-پراکندگی.html#fig:scatterplot">3.1</a>
+سه نمونه نمودار پراکندگی رسم شده است.</p>
+<details>
+<summary>
+<strong>نمایش کد <svg aria-hidden="true" role="img" viewBox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M278.9 511.5l-61-17.7c-6.4-1.8-10-8.5-8.2-14.9L346.2 8.7c1.8-6.4 8.5-10 14.9-8.2l61 17.7c6.4 1.8 10 8.5 8.2 14.9L293.8 503.3c-1.9 6.4-8.5 10.1-14.9 8.2zm-114-112.2l43.5-46.4c4.6-4.9 4.3-12.7-.8-17.2L117 256l90.6-79.7c5.1-4.5 5.5-12.3.8-17.2l-43.5-46.4c-4.5-4.8-12.1-5.1-17-.5L3.8 247.2c-5.1 4.7-5.1 12.8 0 17.5l144.1 135.1c4.9 4.6 12.5 4.4 17-.5zm327.2.6l144.1-135.1c5.1-4.7 5.1-12.8 0-17.5L492.1 112.1c-4.8-4.5-12.4-4.3-17 .5L431.6 159c-4.6 4.9-4.3 12.7.8 17.2L523 256l-90.6 79.7c-5.1 4.5-5.5 12.3-.8 17.2l43.5 46.4c4.5 4.9 12.1 5.1 17 .6z"/></svg></strong>
+</summary>
+<ul>
+<li>فراخوانی کتابخانه‌های مورد نیاز</li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="نمودار-پراکندگی.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="نمودار-پراکندگی.html#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(patchwork)</span>
+<span id="cb1-3"><a href="نمودار-پراکندگی.html#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggrepel)</span></code></pre></div>
+<ul>
+<li>وارد کردن داده‌ها از فایل به محیط کاری R</li>
+</ul>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="نمودار-پراکندگی.html#cb2-1" aria-hidden="true" tabindex="-1"></a>mrtl_phys <span class="ot">&lt;-</span> <span class="fu">read_table</span>(<span class="st">&quot;./data/fig/Fig9-1a.dat&quot;</span>)</span>
+<span id="cb2-2"><a href="نمودار-پراکندگی.html#cb2-2" aria-hidden="true" tabindex="-1"></a>expt_capt <span class="ot">&lt;-</span> <span class="fu">read_table</span>(<span class="st">&quot;./data/fig/Fig9-1b.dat&quot;</span>)</span>
+<span id="cb2-3"><a href="نمودار-پراکندگی.html#cb2-3" aria-hidden="true" tabindex="-1"></a>cncr_solr <span class="ot">&lt;-</span> <span class="fu">read_table</span>(<span class="st">&quot;./data/fig/Fig9-1c.dat&quot;</span>)</span></code></pre></div>
+<ul>
+<li>تعریف مختصات و برچسب‌های محورها و عنوان نمودارها</li>
+</ul>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="نمودار-پراکندگی.html#cb3-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> </span>
+<span id="cb3-2"><a href="نمودار-پراکندگی.html#cb3-2" aria-hidden="true" tabindex="-1"></a>  mrtl_phys <span class="sc">|&gt;</span> </span>
+<span id="cb3-3"><a href="نمودار-پراکندگی.html#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span> <span class="fu">aes</span>(<span class="at">x =</span> Physicians, <span class="at">y =</span> InfMort) <span class="sc">+</span> </span>
+<span id="cb3-4"><a href="نمودار-پراکندگی.html#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">10</span>, <span class="dv">20</span>), <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">2</span>)) <span class="sc">+</span></span>
+<span id="cb3-5"><a href="نمودار-پراکندگی.html#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">10</span>, <span class="dv">10</span>), <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">10</span>, <span class="dv">10</span>, <span class="dv">5</span>)) <span class="sc">+</span></span>
+<span id="cb3-6"><a href="نمودار-پراکندگی.html#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb3-7"><a href="نمودار-پراکندگی.html#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">&quot;Physicians per 10,000 Population&quot;</span>,</span>
+<span id="cb3-8"><a href="نمودار-پراکندگی.html#cb3-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">&quot;Adjusted Infant Mortality&quot;</span>,</span>
+<span id="cb3-9"><a href="نمودار-پراکندگی.html#cb3-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption =</span> <span class="st">&quot;(a) Infant Mortality as a Function of</span><span class="sc">\n</span><span class="st">Number of Physicians&quot;</span></span>
+<span id="cb3-10"><a href="نمودار-پراکندگی.html#cb3-10" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb3-11"><a href="نمودار-پراکندگی.html#cb3-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-12"><a href="نمودار-پراکندگی.html#cb3-12" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> </span>
+<span id="cb3-13"><a href="نمودار-پراکندگی.html#cb3-13" aria-hidden="true" tabindex="-1"></a>  expt_capt <span class="sc">|&gt;</span> </span>
+<span id="cb3-14"><a href="نمودار-پراکندگی.html#cb3-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span> <span class="fu">aes</span>(<span class="at">x =</span> Expend, <span class="at">y =</span> LifeExp) <span class="sc">+</span></span>
+<span id="cb3-15"><a href="نمودار-پراکندگی.html#cb3-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1500</span>), <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">1500</span>, <span class="dv">500</span>)) <span class="sc">+</span></span>
+<span id="cb3-16"><a href="نمودار-پراکندگی.html#cb3-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">66</span>, <span class="dv">74</span>), <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">66</span>, <span class="dv">74</span>, <span class="dv">1</span>)) <span class="sc">+</span></span>
+<span id="cb3-17"><a href="نمودار-پراکندگی.html#cb3-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb3-18"><a href="نمودار-پراکندگی.html#cb3-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">&quot;Per Capita Health Expenditure ($)&quot;</span>,</span>
+<span id="cb3-19"><a href="نمودار-پراکندگی.html#cb3-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">&quot;Life Expectancy (males)&quot;</span>,</span>
+<span id="cb3-20"><a href="نمودار-پراکندگی.html#cb3-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption =</span> <span class="st">&quot;(b) Life Expectancy as a Function of</span><span class="sc">\n</span><span class="st">Health Care Expenditures&quot;</span></span>
+<span id="cb3-21"><a href="نمودار-پراکندگی.html#cb3-21" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb3-22"><a href="نمودار-پراکندگی.html#cb3-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-23"><a href="نمودار-پراکندگی.html#cb3-23" aria-hidden="true" tabindex="-1"></a>c <span class="ot">&lt;-</span> </span>
+<span id="cb3-24"><a href="نمودار-پراکندگی.html#cb3-24" aria-hidden="true" tabindex="-1"></a>  cncr_solr <span class="sc">|&gt;</span></span>
+<span id="cb3-25"><a href="نمودار-پراکندگی.html#cb3-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span> <span class="fu">aes</span>(<span class="at">x =</span> Radiation, <span class="at">y =</span> Cancer) <span class="sc">+</span></span>
+<span id="cb3-26"><a href="نمودار-پراکندگی.html#cb3-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">200</span>, <span class="dv">600</span>), <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">200</span>, <span class="dv">600</span>, <span class="dv">100</span>)) <span class="sc">+</span></span>
+<span id="cb3-27"><a href="نمودار-پراکندگی.html#cb3-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">20</span>, <span class="dv">35</span>), <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">20</span>, <span class="dv">35</span>, <span class="dv">5</span>)) <span class="sc">+</span></span>
+<span id="cb3-28"><a href="نمودار-پراکندگی.html#cb3-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb3-29"><a href="نمودار-پراکندگی.html#cb3-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">&quot;Solar Radiation&quot;</span>,</span>
+<span id="cb3-30"><a href="نمودار-پراکندگی.html#cb3-30" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">&quot;Cancer Rate&quot;</span>,</span>
+<span id="cb3-31"><a href="نمودار-پراکندگی.html#cb3-31" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption =</span> <span class="st">&quot;(c) Cancer Rate as a Function of</span><span class="sc">\n</span><span class="st">Solar Radiation&quot;</span></span>
+<span id="cb3-32"><a href="نمودار-پراکندگی.html#cb3-32" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div>
+<ul>
+<li>نشان دادن نام بعضی از کشورها و شهرها روی نمودار پراکندگی</li>
+</ul>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="نمودار-پراکندگی.html#cb4-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> </span>
+<span id="cb4-2"><a href="نمودار-پراکندگی.html#cb4-2" aria-hidden="true" tabindex="-1"></a>  a <span class="sc">+</span></span>
+<span id="cb4-3"><a href="نمودار-پراکندگی.html#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text_repel</span>(</span>
+<span id="cb4-4"><a href="نمودار-پراکندگی.html#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">data =</span> mrtl_phys <span class="sc">|&gt;</span> <span class="fu">filter</span>(Country <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&quot;Italy&quot;</span>, <span class="st">&quot;Denmark&quot;</span>,<span class="st">&quot;Finland&quot;</span>)),</span>
+<span id="cb4-5"><a href="نمودار-پراکندگی.html#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">label =</span> Country), <span class="at">size =</span> <span class="dv">5</span><span class="sc">/</span>.pt, <span class="at">family =</span> <span class="st">&quot;serif&quot;</span></span>
+<span id="cb4-6"><a href="نمودار-پراکندگی.html#cb4-6" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb4-7"><a href="نمودار-پراکندگی.html#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-8"><a href="نمودار-پراکندگی.html#cb4-8" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> </span>
+<span id="cb4-9"><a href="نمودار-پراکندگی.html#cb4-9" aria-hidden="true" tabindex="-1"></a>  b <span class="sc">+</span></span>
+<span id="cb4-10"><a href="نمودار-پراکندگی.html#cb4-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text_repel</span>(</span>
+<span id="cb4-11"><a href="نمودار-پراکندگی.html#cb4-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">data =</span> expt_capt <span class="sc">|&gt;</span> <span class="fu">filter</span>(Country <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&quot;Portugal&quot;</span>, <span class="st">&quot;Japan&quot;</span>,<span class="st">&quot;Iceland&quot;</span>)),</span>
+<span id="cb4-12"><a href="نمودار-پراکندگی.html#cb4-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">label =</span> Country), <span class="at">size =</span> <span class="dv">5</span><span class="sc">/</span>.pt, <span class="at">family =</span> <span class="st">&quot;serif&quot;</span></span>
+<span id="cb4-13"><a href="نمودار-پراکندگی.html#cb4-13" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb4-14"><a href="نمودار-پراکندگی.html#cb4-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-15"><a href="نمودار-پراکندگی.html#cb4-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-16"><a href="نمودار-پراکندگی.html#cb4-16" aria-hidden="true" tabindex="-1"></a>c <span class="ot">&lt;-</span> </span>
+<span id="cb4-17"><a href="نمودار-پراکندگی.html#cb4-17" aria-hidden="true" tabindex="-1"></a>  c <span class="sc">+</span></span>
+<span id="cb4-18"><a href="نمودار-پراکندگی.html#cb4-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text_repel</span>(</span>
+<span id="cb4-19"><a href="نمودار-پراکندگی.html#cb4-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">data =</span> cncr_solr <span class="sc">|&gt;</span> <span class="fu">filter</span>(City <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&quot;New-York&quot;</span>, <span class="st">&quot;Omaha&quot;</span>,<span class="st">&quot;Phoenix&quot;</span>)),</span>
+<span id="cb4-20"><a href="نمودار-پراکندگی.html#cb4-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">label =</span> City), <span class="at">size =</span> <span class="dv">5</span><span class="sc">/</span>.pt, <span class="at">family =</span> <span class="st">&quot;serif&quot;</span></span>
+<span id="cb4-21"><a href="نمودار-پراکندگی.html#cb4-21" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div>
+<ul>
+<li>ترکیب سه نمودار و مشخص کردن نوع نمودار و تنظیم قالب نهایی</li>
+</ul>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="نمودار-پراکندگی.html#cb5-1" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> </span>
+<span id="cb5-2"><a href="نمودار-پراکندگی.html#cb5-2" aria-hidden="true" tabindex="-1"></a>  a <span class="sc">+</span> b <span class="sc">+</span> c <span class="sc">+</span></span>
+<span id="cb5-3"><a href="نمودار-پراکندگی.html#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">plot_layout</span>(<span class="at">design =</span> <span class="st">&quot;AABBCC&quot;</span>) <span class="sc">&amp;</span></span>
+<span id="cb5-4"><a href="نمودار-پراکندگی.html#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">se =</span> <span class="cn">FALSE</span>, <span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">formula =</span> <span class="st">&quot;y ~ x&quot;</span>, <span class="at">color =</span> <span class="st">&quot;black&quot;</span>) <span class="sc">&amp;</span></span>
+<span id="cb5-5"><a href="نمودار-پراکندگی.html#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">shape =</span> <span class="dv">21</span>, <span class="at">color =</span> <span class="st">&quot;black&quot;</span>, <span class="at">fill =</span> <span class="st">&quot;grey40&quot;</span>) <span class="sc">&amp;</span></span>
+<span id="cb5-6"><a href="نمودار-پراکندگی.html#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>(<span class="at">base_family =</span> <span class="st">&quot;serif&quot;</span>) <span class="sc">&amp;</span></span>
+<span id="cb5-7"><a href="نمودار-پراکندگی.html#cb5-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb5-8"><a href="نمودار-پراکندگی.html#cb5-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">6</span>),</span>
+<span id="cb5-9"><a href="نمودار-پراکندگی.html#cb5-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">6</span>, <span class="at">face =</span> <span class="st">&quot;bold&quot;</span>, <span class="at">color=</span><span class="st">&quot;black&quot;</span>),</span>
+<span id="cb5-10"><a href="نمودار-پراکندگی.html#cb5-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.text=</span><span class="fu">element_text</span>(<span class="at">color=</span><span class="st">&quot;black&quot;</span>),</span>
+<span id="cb5-11"><a href="نمودار-پراکندگی.html#cb5-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.text.x=</span><span class="fu">element_text</span>(<span class="at">vjust=</span><span class="sc">-</span><span class="fl">0.25</span>),</span>
+<span id="cb5-12"><a href="نمودار-پراکندگی.html#cb5-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.text.y=</span><span class="fu">element_text</span>(<span class="at">hjust=</span><span class="dv">1</span>),</span>
+<span id="cb5-13"><a href="نمودار-پراکندگی.html#cb5-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.ticks=</span><span class="fu">element_line</span>(<span class="at">color=</span><span class="st">&quot;black&quot;</span>, <span class="at">size=</span><span class="fl">0.5</span>),</span>
+<span id="cb5-14"><a href="نمودار-پراکندگی.html#cb5-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.ticks.length=</span><span class="fu">unit</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="st">&quot;mm&quot;</span>),</span>
+<span id="cb5-15"><a href="نمودار-پراکندگی.html#cb5-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.caption=</span><span class="fu">element_text</span>(<span class="at">hjust=</span><span class="fl">0.5</span>, <span class="at">size =</span> <span class="dv">6</span>),</span>
+<span id="cb5-16"><a href="نمودار-پراکندگی.html#cb5-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.background =</span> <span class="fu">element_blank</span>()</span>
+<span id="cb5-17"><a href="نمودار-پراکندگی.html#cb5-17" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div>
+</details>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:scatterplot"></span>
+<img src="statistical-methods-for-psychology_files/figure-html/scatterplot-1.png" alt="سه نمودار پراکندگی" width="95%" />
+<p class="caption">
+شکل 3.1: سه نمودار پراکندگی
+</p>
+</div>
+</div>
+<p>نمودار a
+از شکل
+<a href="نمودار-پراکندگی.html#fig:scatterplot">3.1</a>
+از داده‌های گزارش شده در مطالعه
+<span class="citation">(<a href="#ref-leger1978anomaly" role="doc-biblioref">Leger, Cochrane, and Moore 1978</a>)</span>
+که روی رابطه بین مرگ و میر نوزادان، تنظیم شده برای تولید ناخالص ملی، و
+تعداد پزشکان در هر ۱۰۰۰۰ جمعیت رسم شده است.
+نکته قابل توجه این است که میزان مرگ و میر نوزادان با
+تعداد پزشکان <strong>افزایش</strong> یافته است،
+که نمایانگر <strong>همبستگی مثبت</strong> است.
+این یک نتیجه غیرمنتظر است اما قطعا شانسی نیست.</p>
+<ul>
+<li><p>جاستین فلاور از دانشگاه اوهایو تحلیل جالبی ارائه داد.</p>
+<ol style="list-style-type: decimal">
+<li><p>ممکن است که مشکل در گزارش دهی میزان مرگ و میر نوزادان باشد.
+هر چه تعداد پزشکان بیشتر باشد، گزارش بهتری ارائه می‌شود.</p></li>
+<li><p>ممکن است پزشکان نرخ تولدهای زنده را افزایش دهند
+که بلافاصله پس از تولد می میرند و در نرخ مرگ و میر به حساب می آیند،
+اما اگر زنده به دنیا نمی آمدند به حساب نمی آمدند.</p></li>
+</ol></li>
+</ul>
+<div class="definition">
+<p><span id="def:unlabeled-div-3" class="definition"><strong>تعریف 3.2  </strong></span>خط مستقیمی که در نمودارهای شکل
+<a href="نمودار-پراکندگی.html#fig:scatterplot">3.1</a>
+رسم شده <strong>بهترین تناسب با داده‌ها</strong> را دارند.
+که آن را خطوط رگرسیونی
+(regression lines)
+پیش بینی کننده
+<span class="math inline">\(Y\)</span>
+بر حسب
+<span class="math inline">\(X\)</span>
+(به طور خلاصه
+<span class="math inline">\(Y\)</span>
+بر
+<span class="math inline">\(X\)</span>
+)
+می‌گویند</p>
+</div>
+<p>در نمودار
+b
+شکل
+<a href="نمودار-پراکندگی.html#fig:scatterplot">3.1</a>
+داده‌ها از رابطه بین امید به زندگی (برای مردان) و هزینه سرانه مراقبت های
+بهداشتی برای ۲۳ کشور توسعه یافته (بیشتر اروپا) رسم شده که در مطالعه
+<span class="citation">(<a href="#ref-cochrane1978health" role="doc-biblioref">Cochrane, St Leger, and Moore 1978</a>)</span>
+بررسی شده است. که نشان می‌دهد <strong>هیچ همبستگی</strong> بین میزان هزینه برای بهداشت
+رابطه‌ی چندانی با امید به زندگی در مردان ندارد.</p>
+<p>در نمودار
+c
+شکل
+<a href="نمودار-پراکندگی.html#fig:scatterplot">3.1</a>
+رابطه‌ی بین سرطان پستان و تابش خورشید بررسی شده است.
+<span class="citation">(<a href="#ref-lappe2006vitamin" role="doc-biblioref">Lappe et al. 2006</a>)</span>
+با افزایش تابش خورشید میزان مرگ و میر ناشی از سرطان پستان کاهش می‌یابد
+که <strong>همبستگی منفی</strong> را نشان می‌دهد.</p>
+
+</div>
+<h3>منابع<a href="منابع.html#منابع" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-cochrane1978health" class="csl-entry">
+Cochrane, A Leger, AS St Leger, and F Moore. 1978. <span>“Health Service’input’and Mortality’output’in Developed Countries.”</span> <em>Journal of Epidemiology &amp; Community Health</em> 32 (3): 200–205.
+</div>
+<div id="ref-lappe2006vitamin" class="csl-entry">
+Lappe, Joan M, K Michael Davies, Dianne Travers-Gustafson, and Robert P Heaney. 2006. <span>“Vitamin d Status in a Rural Postmenopausal Female Population.”</span> <em>Journal of the American College of Nutrition</em> 25 (5): 395–402.
+</div>
+<div id="ref-leger1978anomaly" class="csl-entry">
+Leger, AS St, AL Cochrane, and F Moore. 1978. <span>“The Anomaly That Wouldn’t Go Away.”</span> <em>The Lancet</em> 312 (8100): 1153.
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="همبستگی-و-رگرسیون.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="رابطه-بین-ریتم-زندگی-و-بیماری-قلبی.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": false,
+"twitter": true,
+"linkedin": true,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": true,
+"all": null
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section"
+},
+"info": false
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
