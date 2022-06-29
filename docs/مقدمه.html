@@ -5,25 +5,19 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>مقدمه | روش‌های آماری برای روانشناسی</title>
-  <meta name="description" content="<blockquote>
-<p>“این مطالب در حال بروزرسانی است.”</p>
-</blockquote>" />
+  <meta name="description" content="“این مطالب در حال بروزرسانی است.”" />
   <meta name="generator" content="bookdown 0.26 and GitBook 2.6.7" />
 
   <meta property="og:title" content="مقدمه | روش‌های آماری برای روانشناسی" />
   <meta property="og:type" content="book" />
   <meta property="og:image" content="https://mohsenebrahimyir.github.io/statistical-methods-for-psychology/./img/cover.png" />
-  <meta property="og:description" content="<blockquote>
-<p>“این مطالب در حال بروزرسانی است.”</p>
-</blockquote>" />
+  <meta property="og:description" content="“این مطالب در حال بروزرسانی است.”" />
   
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="مقدمه | روش‌های آماری برای روانشناسی" />
   
-  <meta name="twitter:description" content="<blockquote>
-<p>“این مطالب در حال بروزرسانی است.”</p>
-</blockquote>" />
+  <meta name="twitter:description" content="“این مطالب در حال بروزرسانی است.”" />
   <meta name="twitter:image" content="https://mohsenebrahimyir.github.io/statistical-methods-for-psychology/./img/cover.png" />
 
 <meta name="author" content="محسن ابراهیمی" />
@@ -215,7 +209,7 @@ div.csl-indent {
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">روش‌های آماری برای روانشناسی</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"><p>روش‌های آماری برای روانشناسی</p></a>
           </h1>
         </div>
 
@@ -246,14 +240,6 @@ div.csl-indent {
 <a href="https://www.uvm.edu/~statdhtx/methods8/"><strong>اینجا</strong></a>
 مراجعه فرمائید.</p></li>
 </ul>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-3"></span>
-<img src="img/DecisionTree.jpg" alt="درخت کلی از مطالب آماری ارائه شده در کتاب" width="80%" />
-<p class="caption">
-شکل 0.1: درخت کلی از مطالب آماری ارائه شده در کتاب
-</p>
-</div>
-<div id="htmlwidget-e575f561de415b4a7765" style="width:95%;height:480px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-e575f561de415b4a7765">{"x":{"diagram":"\ndigraph decision_tree {\n\n  # a \"graph\" statement\n  graph [overlap = true, fontsize = 5, rankdir = LR]\n\n  # several \"node\" statements\n  node [shape = box,  fontname = Helvetica]\n  ToD [label = \"Type of data\"]\n  \n  QuC [label = \"Qualitative\n(Categorical)\"]\n  QuM [label = \"Quantitative\n(Measurement)\"]\n  \n  ToC [label = \"Type of\nCategorization\"]\n  ToQ [label = \"Type of\nQuestion\"]\n  \n  OCV [label = \"One\nCategorical\nVariable\"]\n  TCV [label = \"Two\nCategorical\nVariable\"]\n  \n  GFX [label = \"Goodness of\nFit &chi;²\"]\n  CTX [label = \"Contingency\nTable &chi;²\"]\n  \n  Rel [label = \"Relationships\"]\n  Dif [label = \"Difference\"]\n  \n  NoP [label = \"Number of\nPredictors\"]\n  NoG [label = \"Number of\nGroups\"]\n  \n  NPO [label = \"One\"]\n  NPM [label = \"Multiple\"]\n  NGT [label = \"Two\"]\n  NGM [label = \"Multiple\"]\n  \n  \n  MuR [label = \"Multiple\nRegression\"]\n  Mea [label = \"Measurement\"]\n  Con [label = \"Continuous\"]\n  Ran [label = \"Ranks\"]\n  Spr [label = \"Spearman\\\"s\nrₛ\"]\n  PrI [label = \"Primary\nInterest\"]\n  DoR [label = \"Degree of\nRelationship\"]\n  FoR [label = \"Form of\nRelationship\"]\n  PeC [label = \"Pearson\nCorrelation\"]\n  Reg [label = \"Regression\"]\n  \n  \n  \n  \n  node [\n    shape = circle,\n    fixedsize = true,\n    width = 0.9\n  ]\n\n  # several \"edge\" statements\n  \n  ToD -> {QuC, QuM}\n  \n  QuC -> ToC \n  ToC -> {OCV, TCV}\n  OCV -> GFX\n  TCV -> CTX\n  \n  QuM -> ToQ -> {Rel, Dif}\n  Rel -> NoP -> {NPO, NPM}\n  NPO -> Mea -> {Con, Ran}\n  Con -> PrI\n  PrI -> {DoR, FoR}\n  DoR -> PeC\n  FoR -> Reg\n  Ran -> Spr\n  \n  NPM -> MuR\n  \n  Dif -> NoG -> {NGT, NGM}\n  \n  NGT -> TRB -> {TRI, TRD}\n  TRI -> {TSt, MaW}\n  TRD -> {RSt, Wil}\n  \n  NGM -> MRB -> {MRI, MRD}\n  \n  MRI -> NIV -> {INO, INM}\n  INO -> {OWA, KrW}\n  INM -> FaA\n  MRD -> {ReM, Fri}\n  \n  \n{rank=min ToD}\n{rank=same QuC, QuM}\n{rank=same NPO NPM NGT NGM}\n{ran=same TRI TRD MRI MRD}\n{rank=max GFX CTX PeC Reg Spr TSt MaW RSt Wil OWA KrW FaA ReM Fri}\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 
 </div>
 <h3>منابع<a href="منابع.html#منابع" class="anchor-section" aria-label="Anchor link to header"></a></h3>
